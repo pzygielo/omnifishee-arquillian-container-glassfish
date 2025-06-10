@@ -57,7 +57,6 @@
 // Portions Copyright [2021] [OmniFaces and/or its affiliates]
 package org.omnifaces.arquillian.container.glassfish.embedded.app;
 
-import jakarta.ejb.Local;
 import jakarta.ejb.Stateless;
 
 /**
@@ -65,9 +64,7 @@ import jakarta.ejb.Stateless;
  * @author <a href="mailto:aslak@redhat.com">Aslak Knutsen</a>
  * @version $Revision: $
  */
-// FIXME: The name is required - probably a bug in GlassFish
-@Stateless(name = "LocalInterfaceEJB")
-@Local
+@Stateless
 public class LocalInterfaceEJBBean implements LocalInterfaceEJB {
     @Override
     public String getName() {
