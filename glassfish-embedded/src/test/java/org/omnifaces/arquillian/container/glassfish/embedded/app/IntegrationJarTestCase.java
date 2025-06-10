@@ -59,6 +59,7 @@
 package org.omnifaces.arquillian.container.glassfish.embedded.app;
 
 import jakarta.ejb.EJB;
+import jakarta.ejb.Stateless;
 
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
@@ -77,6 +78,7 @@ import static org.junit.Assert.assertNotNull;
  * @version $Revision: $
  */
 @RunWith(Arquillian.class)
+@Stateless
 public class IntegrationJarTestCase {
 
     @Deployment
