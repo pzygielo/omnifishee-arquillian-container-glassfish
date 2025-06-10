@@ -58,7 +58,7 @@
 // Portions Copyright [2025] [OmniFish and/or its affiliates]
 package org.omnifaces.arquillian.container.glassfish.embedded.app;
 
-import jakarta.ejb.EJB;
+import jakarta.inject.Inject;
 
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
@@ -85,7 +85,7 @@ public class IntegrationJarTestCase {
             .addAsManifestResource("beans.xml");
     }
 
-    @EJB
+    @Inject
     private LocalInterfaceEJB bean;
 
     @Test
