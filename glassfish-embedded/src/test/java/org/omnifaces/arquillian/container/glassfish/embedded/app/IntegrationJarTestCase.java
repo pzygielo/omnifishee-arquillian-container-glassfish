@@ -95,6 +95,11 @@ public class IntegrationJarTestCase {
     public void shouldBeAbleToInjectEJBAsInstanceVariable() throws Exception {
         System.out.printf("GF25535 Name: %s%n", bean != null ? bean.getName() : null);
 
+        System.out.println("Time to copy arquillian archive:");
+        System.out.println("  find /tmp/gfem* -name '*.war' -path '*/__internal/*' -exec cp -v {} /tmp/gf25535.war \\;");
+        Thread.sleep(15_000);
+        System.out.println("Continue to assertions");
+
         assertNotNull("Verify that the Bean has been injected", bean);
 
         assertEquals("Arquillian", bean.getName());
