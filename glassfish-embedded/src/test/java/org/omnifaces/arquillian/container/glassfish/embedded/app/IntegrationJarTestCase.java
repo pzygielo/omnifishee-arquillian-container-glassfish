@@ -93,6 +93,8 @@ public class IntegrationJarTestCase {
 
     @Test
     public void shouldBeAbleToInjectEJBAsInstanceVariable() throws Exception {
+        System.out.printf("GF25535 Name: %s%n", bean != null ? bean.getName() : null);
+
         assertNotNull("Verify that the Bean has been injected", bean);
 
         assertEquals("Arquillian", bean.getName());
