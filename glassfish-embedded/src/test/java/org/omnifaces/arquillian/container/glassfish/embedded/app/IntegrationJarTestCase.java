@@ -81,7 +81,10 @@ public class IntegrationJarTestCase {
 
     @Deployment
     public static JavaArchive createDeployment() throws Exception {
-        return create(JavaArchive.class).addClasses(LocalInterfaceEJB.class, LocalInterfaceEJBBean.class)
+        return create(JavaArchive.class)
+            .addClasses(NameProvider.class,
+                        LocalInterfaceEJB.class,
+                        LocalInterfaceEJBBean.class)
             .addAsManifestResource("beans.xml");
     }
 
